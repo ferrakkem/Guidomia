@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -28,12 +29,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncT-CZ-lxY">
-                        <rect key="frame" x="158" y="63" width="180" height="28"/>
+                        <rect key="frame" x="158" y="61" width="180" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIP-0I-tXf" customClass="CosmosView" customModule="Cosmos">
+                        <rect key="frame" x="158" y="89" width="196" height="43"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" red="0.83529411764705885" green="0.83529411764705885" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tableViewCellContentView>
@@ -42,11 +48,20 @@
                 <outlet property="carImage" destination="i5G-dH-jqI" id="r7d-z3-Tuc"/>
                 <outlet property="carMakeInfo" destination="dMF-2h-czm" id="UDn-jF-YFH"/>
                 <outlet property="price" destination="ncT-CZ-lxY" id="u8S-yH-neT"/>
+                <outlet property="ratingView" destination="fIP-0I-tXf" id="qw2-ss-DrG"/>
             </connections>
             <point key="canvasLocation" x="173.18840579710147" y="167.07589285714286"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="fIP-0I-tXf">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Mercedez_benz_GLC.jpg" width="144.47999572753906" height="96"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
