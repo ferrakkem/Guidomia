@@ -37,8 +37,10 @@ class ViewController: UIViewController {
     
     //MARK: - Load Data
     func loadData(){
+        LoadingStart(messsage: "Loading...")
         carViewModel.fetchCarList { [weak self] in
             DispatchQueue.main.async {
+                self?.LoadingStop()
                 self?.carListTableView.reloadData()
             }
         }
