@@ -15,6 +15,21 @@
 		F35832D5262A201D005D1746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35832D3262A201D005D1746 /* LaunchScreen.storyboard */; };
 		F35832E0262A201E005D1746 /* GuidomiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35832DF262A201E005D1746 /* GuidomiaTests.swift */; };
 		F35832EB262A201E005D1746 /* GuidomiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35832EA262A201E005D1746 /* GuidomiaUITests.swift */; };
+		F3583309262A21DF005D1746 /* car_list.json in Resources */ = {isa = PBXBuildFile; fileRef = F3583308262A21DF005D1746 /* car_list.json */; };
+		F3583312262A21FF005D1746 /* Tacoma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F358330D262A21FF005D1746 /* Tacoma.jpg */; };
+		F3583313262A21FF005D1746 /* Alpine_roadster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F358330E262A21FF005D1746 /* Alpine_roadster.jpg */; };
+		F3583314262A21FF005D1746 /* BMW_330i.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F358330F262A21FF005D1746 /* BMW_330i.jpg */; };
+		F3583315262A21FF005D1746 /* Mercedez_benz_GLC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3583310262A21FF005D1746 /* Mercedez_benz_GLC.jpg */; };
+		F3583316262A21FF005D1746 /* Range_Rover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3583311262A21FF005D1746 /* Range_Rover.jpg */; };
+		F358331C262A23BC005D1746 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358331B262A23BC005D1746 /* CarModel.swift */; };
+		F362BECF262E6BA400538B2A /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362BECE262E6BA400538B2A /* K.swift */; };
+		F362BED6262E6D2F00538B2A /* CarListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362BED4262E6D2F00538B2A /* CarListTableViewCell.swift */; };
+		F362BED7262E6D2F00538B2A /* CarListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F362BED5262E6D2F00538B2A /* CarListTableViewCell.xib */; };
+		F362BEEB262E7C0800538B2A /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362BEE8262E7C0800538B2A /* CustomView.swift */; };
+		F362BEEC262E7C0800538B2A /* RoundedRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362BEE9262E7C0800538B2A /* RoundedRectButton.swift */; };
+		F362BEED262E7C0800538B2A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362BEEA262E7C0800538B2A /* Loader.swift */; };
+		F36FEBAD262CC41400484710 /* NetwrokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36FEBAC262CC41400484710 /* NetwrokManager.swift */; };
+		F36FEBB2262CC76200484710 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36FEBB1262CC76200484710 /* CarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +64,21 @@
 		F35832E6262A201E005D1746 /* GuidomiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuidomiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35832EA262A201E005D1746 /* GuidomiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidomiaUITests.swift; sourceTree = "<group>"; };
 		F35832EC262A201E005D1746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3583308262A21DF005D1746 /* car_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car_list.json; sourceTree = "<group>"; };
+		F358330D262A21FF005D1746 /* Tacoma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tacoma.jpg; sourceTree = "<group>"; };
+		F358330E262A21FF005D1746 /* Alpine_roadster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Alpine_roadster.jpg; sourceTree = "<group>"; };
+		F358330F262A21FF005D1746 /* BMW_330i.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_330i.jpg; sourceTree = "<group>"; };
+		F3583310262A21FF005D1746 /* Mercedez_benz_GLC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercedez_benz_GLC.jpg; sourceTree = "<group>"; };
+		F3583311262A21FF005D1746 /* Range_Rover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Range_Rover.jpg; sourceTree = "<group>"; };
+		F358331B262A23BC005D1746 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		F362BECE262E6BA400538B2A /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		F362BED4262E6D2F00538B2A /* CarListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListTableViewCell.swift; sourceTree = "<group>"; };
+		F362BED5262E6D2F00538B2A /* CarListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarListTableViewCell.xib; sourceTree = "<group>"; };
+		F362BEE8262E7C0800538B2A /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		F362BEE9262E7C0800538B2A /* RoundedRectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedRectButton.swift; sourceTree = "<group>"; };
+		F362BEEA262E7C0800538B2A /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		F36FEBAC262CC41400484710 /* NetwrokManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetwrokManager.swift; sourceTree = "<group>"; };
+		F36FEBB1262CC76200484710 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +131,8 @@
 			children = (
 				F35832C8262A201C005D1746 /* AppDelegate.swift */,
 				F35832CA262A201C005D1746 /* SceneDelegate.swift */,
-				F35832CC262A201C005D1746 /* ViewController.swift */,
-				F35832CE262A201C005D1746 /* Main.storyboard */,
+				F35832FB262A2060005D1746 /* Modules */,
+				F3583304262A2139005D1746 /* Source */,
 				F35832D1262A201D005D1746 /* Assets.xcassets */,
 				F35832D3262A201D005D1746 /* LaunchScreen.storyboard */,
 				F35832D6262A201D005D1746 /* Info.plist */,
@@ -126,6 +156,133 @@
 				F35832EC262A201E005D1746 /* Info.plist */,
 			);
 			path = GuidomiaUITests;
+			sourceTree = "<group>";
+		};
+		F35832FB262A2060005D1746 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F3583324262A3249005D1746 /* HomePage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F3583304262A2139005D1746 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F3583327262A32A3005D1746 /* JsonData */,
+				F3583323262A2EE3005D1746 /* Managers */,
+				F3583306262A21B4005D1746 /* Images */,
+				F3583305262A2149005D1746 /* Common */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F3583305262A2149005D1746 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F362BEE7262E7C0800538B2A /* Uitilities */,
+				F3583307262A21BB005D1746 /* Constant */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F3583306262A21B4005D1746 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F358330E262A21FF005D1746 /* Alpine_roadster.jpg */,
+				F358330F262A21FF005D1746 /* BMW_330i.jpg */,
+				F3583310262A21FF005D1746 /* Mercedez_benz_GLC.jpg */,
+				F3583311262A21FF005D1746 /* Range_Rover.jpg */,
+				F358330D262A21FF005D1746 /* Tacoma.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		F3583307262A21BB005D1746 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				F362BECE262E6BA400538B2A /* K.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		F358331A262A2261005D1746 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F358331B262A23BC005D1746 /* CarModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3583323262A2EE3005D1746 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F36FEBAB262CC3D700484710 /* Network */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F3583324262A3249005D1746 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				F358331A262A2261005D1746 /* Model */,
+				F3583325262A325A005D1746 /* View */,
+				F3583326262A328A005D1746 /* ViewModel */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		F3583325262A325A005D1746 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F35832CE262A201C005D1746 /* Main.storyboard */,
+				F35832CC262A201C005D1746 /* ViewController.swift */,
+				F362BED3262E6D0400538B2A /* CarListCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F3583326262A328A005D1746 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F36FEBB1262CC76200484710 /* CarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F3583327262A32A3005D1746 /* JsonData */ = {
+			isa = PBXGroup;
+			children = (
+				F3583308262A21DF005D1746 /* car_list.json */,
+			);
+			path = JsonData;
+			sourceTree = "<group>";
+		};
+		F362BED3262E6D0400538B2A /* CarListCell */ = {
+			isa = PBXGroup;
+			children = (
+				F362BED4262E6D2F00538B2A /* CarListTableViewCell.swift */,
+				F362BED5262E6D2F00538B2A /* CarListTableViewCell.xib */,
+			);
+			path = CarListCell;
+			sourceTree = "<group>";
+		};
+		F362BEE7262E7C0800538B2A /* Uitilities */ = {
+			isa = PBXGroup;
+			children = (
+				F362BEE8262E7C0800538B2A /* CustomView.swift */,
+				F362BEE9262E7C0800538B2A /* RoundedRectButton.swift */,
+				F362BEEA262E7C0800538B2A /* Loader.swift */,
+			);
+			path = Uitilities;
+			sourceTree = "<group>";
+		};
+		F36FEBAB262CC3D700484710 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F36FEBAC262CC41400484710 /* NetwrokManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +388,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3583313262A21FF005D1746 /* Alpine_roadster.jpg in Resources */,
+				F3583314262A21FF005D1746 /* BMW_330i.jpg in Resources */,
+				F362BED7262E6D2F00538B2A /* CarListTableViewCell.xib in Resources */,
 				F35832D5262A201D005D1746 /* LaunchScreen.storyboard in Resources */,
 				F35832D2262A201D005D1746 /* Assets.xcassets in Resources */,
+				F3583309262A21DF005D1746 /* car_list.json in Resources */,
+				F3583312262A21FF005D1746 /* Tacoma.jpg in Resources */,
+				F3583315262A21FF005D1746 /* Mercedez_benz_GLC.jpg in Resources */,
+				F3583316262A21FF005D1746 /* Range_Rover.jpg in Resources */,
 				F35832D0262A201C005D1746 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +422,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F358331C262A23BC005D1746 /* CarModel.swift in Sources */,
+				F362BECF262E6BA400538B2A /* K.swift in Sources */,
+				F362BED6262E6D2F00538B2A /* CarListTableViewCell.swift in Sources */,
+				F362BEEB262E7C0800538B2A /* CustomView.swift in Sources */,
+				F36FEBB2262CC76200484710 /* CarViewModel.swift in Sources */,
 				F35832CD262A201C005D1746 /* ViewController.swift in Sources */,
 				F35832C9262A201C005D1746 /* AppDelegate.swift in Sources */,
+				F362BEEC262E7C0800538B2A /* RoundedRectButton.swift in Sources */,
+				F362BEED262E7C0800538B2A /* Loader.swift in Sources */,
 				F35832CB262A201C005D1746 /* SceneDelegate.swift in Sources */,
+				F36FEBAD262CC41400484710 /* NetwrokManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wildcard.-.Guidomia";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildcard.Guidomia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,7 +634,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wildcard.-.Guidomia";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wildcard.Guidomia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
