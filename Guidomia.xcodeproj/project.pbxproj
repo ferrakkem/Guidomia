@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D8DFFC8203240193A6746DE /* Pods_GuidomiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C555F5E3223D5F8A28041972 /* Pods_GuidomiaTests.framework */; };
+		6B436635A1A1D212C9B07E3D /* Pods_Guidomia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92758FF324506622E6FF0B12 /* Pods_Guidomia.framework */; };
+		9FBDB1DB41B7B607AF86BBF1 /* Pods_Guidomia_GuidomiaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C320EC3D9994AB30AFADC5F5 /* Pods_Guidomia_GuidomiaUITests.framework */; };
 		F35832C9262A201C005D1746 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35832C8262A201C005D1746 /* AppDelegate.swift */; };
 		F35832CB262A201C005D1746 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35832CA262A201C005D1746 /* SceneDelegate.swift */; };
 		F35832CD262A201C005D1746 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35832CC262A201C005D1746 /* ViewController.swift */; };
@@ -50,6 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046FF286232C58F411A199A7 /* Pods-GuidomiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuidomiaTests.release.xcconfig"; path = "Target Support Files/Pods-GuidomiaTests/Pods-GuidomiaTests.release.xcconfig"; sourceTree = "<group>"; };
+		3EF2A001663BAA7BEAF2F68C /* Pods-Guidomia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidomia.release.xcconfig"; path = "Target Support Files/Pods-Guidomia/Pods-Guidomia.release.xcconfig"; sourceTree = "<group>"; };
+		431A8BD81087F5F9BDEFEF17 /* Pods-Guidomia-GuidomiaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidomia-GuidomiaUITests.release.xcconfig"; path = "Target Support Files/Pods-Guidomia-GuidomiaUITests/Pods-Guidomia-GuidomiaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92758FF324506622E6FF0B12 /* Pods_Guidomia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guidomia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93C0B8847D708304148613EC /* Pods-GuidomiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuidomiaTests.debug.xcconfig"; path = "Target Support Files/Pods-GuidomiaTests/Pods-GuidomiaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C320EC3D9994AB30AFADC5F5 /* Pods_Guidomia_GuidomiaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guidomia_GuidomiaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C555F5E3223D5F8A28041972 /* Pods_GuidomiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuidomiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D96CAFE2946770CF608CFA43 /* Pods-Guidomia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidomia.debug.xcconfig"; path = "Target Support Files/Pods-Guidomia/Pods-Guidomia.debug.xcconfig"; sourceTree = "<group>"; };
+		E644FD739C8954F397E34CD7 /* Pods-Guidomia-GuidomiaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guidomia-GuidomiaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Guidomia-GuidomiaUITests/Pods-Guidomia-GuidomiaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F35832C5262A201C005D1746 /* Guidomia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidomia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F35832C8262A201C005D1746 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F35832CA262A201C005D1746 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B436635A1A1D212C9B07E3D /* Pods_Guidomia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8DFFC8203240193A6746DE /* Pods_GuidomiaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +114,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FBDB1DB41B7B607AF86BBF1 /* Pods_Guidomia_GuidomiaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E516A4D008C20960A0621D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D96CAFE2946770CF608CFA43 /* Pods-Guidomia.debug.xcconfig */,
+				3EF2A001663BAA7BEAF2F68C /* Pods-Guidomia.release.xcconfig */,
+				E644FD739C8954F397E34CD7 /* Pods-Guidomia-GuidomiaUITests.debug.xcconfig */,
+				431A8BD81087F5F9BDEFEF17 /* Pods-Guidomia-GuidomiaUITests.release.xcconfig */,
+				93C0B8847D708304148613EC /* Pods-GuidomiaTests.debug.xcconfig */,
+				046FF286232C58F411A199A7 /* Pods-GuidomiaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EAD37BD0AA1229B7D1773AF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92758FF324506622E6FF0B12 /* Pods_Guidomia.framework */,
+				C320EC3D9994AB30AFADC5F5 /* Pods_Guidomia_GuidomiaUITests.framework */,
+				C555F5E3223D5F8A28041972 /* Pods_GuidomiaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F35832BC262A201C005D1746 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +152,8 @@
 				F35832DE262A201E005D1746 /* GuidomiaTests */,
 				F35832E9262A201E005D1746 /* GuidomiaUITests */,
 				F35832C6262A201C005D1746 /* Products */,
+				2E516A4D008C20960A0621D7 /* Pods */,
+				EAD37BD0AA1229B7D1773AF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -292,9 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F35832EF262A201E005D1746 /* Build configuration list for PBXNativeTarget "Guidomia" */;
 			buildPhases = (
+				08AD394C482CE34457599784 /* [CP] Check Pods Manifest.lock */,
 				F35832C1262A201C005D1746 /* Sources */,
 				F35832C2262A201C005D1746 /* Frameworks */,
 				F35832C3262A201C005D1746 /* Resources */,
+				6D1BFD27B6FA251036D5F0D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,6 +352,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F35832F2262A201E005D1746 /* Build configuration list for PBXNativeTarget "GuidomiaTests" */;
 			buildPhases = (
+				F6C896CF9BE0456D94297894 /* [CP] Check Pods Manifest.lock */,
 				F35832D7262A201E005D1746 /* Sources */,
 				F35832D8262A201E005D1746 /* Frameworks */,
 				F35832D9262A201E005D1746 /* Resources */,
@@ -327,9 +371,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F35832F5262A201E005D1746 /* Build configuration list for PBXNativeTarget "GuidomiaUITests" */;
 			buildPhases = (
+				7724041BD421E7961A1ECD70 /* [CP] Check Pods Manifest.lock */,
 				F35832E2262A201E005D1746 /* Sources */,
 				F35832E3262A201E005D1746 /* Frameworks */,
 				F35832E4262A201E005D1746 /* Resources */,
+				EE4C1BF76ED8A8391FE94F8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -416,6 +462,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08AD394C482CE34457599784 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Guidomia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D1BFD27B6FA251036D5F0D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guidomia/Pods-Guidomia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guidomia/Pods-Guidomia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Guidomia/Pods-Guidomia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7724041BD421E7961A1ECD70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Guidomia-GuidomiaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE4C1BF76ED8A8391FE94F8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guidomia-GuidomiaUITests/Pods-Guidomia-GuidomiaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Guidomia-GuidomiaUITests/Pods-Guidomia-GuidomiaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Guidomia-GuidomiaUITests/Pods-Guidomia-GuidomiaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6C896CF9BE0456D94297894 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GuidomiaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F35832C1262A201C005D1746 /* Sources */ = {
@@ -605,6 +754,7 @@
 		};
 		F35832F0262A201E005D1746 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D96CAFE2946770CF608CFA43 /* Pods-Guidomia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -624,6 +774,7 @@
 		};
 		F35832F1262A201E005D1746 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF2A001663BAA7BEAF2F68C /* Pods-Guidomia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -643,6 +794,7 @@
 		};
 		F35832F3262A201E005D1746 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C0B8847D708304148613EC /* Pods-GuidomiaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -665,6 +817,7 @@
 		};
 		F35832F4262A201E005D1746 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 046FF286232C58F411A199A7 /* Pods-GuidomiaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -687,6 +840,7 @@
 		};
 		F35832F6262A201E005D1746 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E644FD739C8954F397E34CD7 /* Pods-Guidomia-GuidomiaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -707,6 +861,7 @@
 		};
 		F35832F7262A201E005D1746 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 431A8BD81087F5F9BDEFEF17 /* Pods-Guidomia-GuidomiaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
