@@ -34,6 +34,18 @@ class CustomView: UIView {
         layer.cornerRadius = radius
     }
     
+    // MARK: - UI
+        let dynamicFontLabel: UILabel = {
+            let label = UILabel()
+            label.font = .systemFont(ofSize: 16)
+            label.textAlignment = .center
+            label.textColor = .black
+            label.adjustsFontSizeToFitWidth = true
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+    
+    
 }
 
 //MARK: - Alert messages

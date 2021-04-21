@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private var carViewModel = CarViewModel()
     @IBOutlet weak var carListTableView: UITableView!
     
+    
     var selectedIndex = -1
     var isCollapce = false
     
@@ -22,16 +23,24 @@ class ViewController: UIViewController {
         
         loadData()
         setTableView()
+        
+        let label = UILabel()
+        label.textColor = UIColor.white
+        label.text = "GUIDOMIA"
+        self.navigationItem.largeTitleDisplayMode = .always
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: label)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
+    
     //MARK: - setUp tableView
     func setTableView(){
         carListTableView.register(UINib(nibName: K.CarList.cellNibName, bundle: nil), forCellReuseIdentifier: K.CarList.cellIdentifier)
-        carListTableView.separatorStyle = .none
+        carListTableView.separatorColor = K.BandColors.orange
+        //carListTableView.sectionHeaderHeight = 30.0
+        //carListTableView.separatorInset = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
         carListTableView.reloadData()
     }
     
@@ -63,11 +72,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = carListTableView.dequeueReusableCell(withIdentifier: K.CarList.cellIdentifier, for: indexPath) as! CarListTableViewCell
-        
         let carInfo = carViewModel.cellForRowAt(indexPath: indexPath)
-        print("**C :\(carInfo)")
         cell.setCellWithValuesOf(carData: carInfo)
-        
         return cell
     }
     
@@ -81,7 +87,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        //print(indexPath.row)
         if selectedIndex == indexPath.row{
             if self.isCollapce == false {
                 self.isCollapce = true
@@ -100,7 +106,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     private func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-
+    
     private func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -108,10 +114,3 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
 }
 
 
-extension UINavigationController {
-    
-    func setNavigationBarColor(color : UIColor){
-        self.navigationBar.barTintColor = color
-    }
-
-}

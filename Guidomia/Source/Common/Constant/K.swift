@@ -17,9 +17,9 @@ struct K{
     }
     
     struct BandColors {
-        static let imageTintColorDuringDownloadSpeed = UIColor(named: "#A0E0E9")
-        static let imageTintColorDuringUpSpeed = UIColor(named: "#674982")
-        static let backGroundColor = UIColor(named: "#192B37")
+        static let orange = UIColor(named: "FC6016")
+        static let darkGray = UIColor(named: "#858585")
+        static let lightGray = UIColor(named: "#D5D5D5")
     }
     
     struct iPhoneScreen {
@@ -28,3 +28,13 @@ struct K{
         static let screenHeight = screenSize.height
     }
 }
+
+
+/*
+ Orange : #FC6016
+ Dark gray : #858585
+ Light gray : #D5D5D5
+ Line : 4px
+ Text : black 45%
+ Bullet point text : black
+ */

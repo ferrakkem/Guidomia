@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -33,6 +33,8 @@
 		F362BEED262E7C0800538B2A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F362BEEA262E7C0800538B2A /* Loader.swift */; };
 		F36FEBAD262CC41400484710 /* NetwrokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36FEBAC262CC41400484710 /* NetwrokManager.swift */; };
 		F36FEBB2262CC76200484710 /* CarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36FEBB1262CC76200484710 /* CarViewModel.swift */; };
+		F373267F262FC376006E86F4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F373267E262FC376006E86F4 /* UIColor.swift */; };
+		F3732685262FDEDF006E86F4 /* ThousandFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3732684262FDEDF006E86F4 /* ThousandFormatted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		F362BEEA262E7C0800538B2A /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		F36FEBAC262CC41400484710 /* NetwrokManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetwrokManager.swift; sourceTree = "<group>"; };
 		F36FEBB1262CC76200484710 /* CarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewModel.swift; sourceTree = "<group>"; };
+		F373267E262FC376006E86F4 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F3732684262FDEDF006E86F4 /* ThousandFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThousandFormatted.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +135,6 @@
 				93C0B8847D708304148613EC /* Pods-GuidomiaTests.debug.xcconfig */,
 				046FF286232C58F411A199A7 /* Pods-GuidomiaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -314,6 +317,8 @@
 				F362BEE8262E7C0800538B2A /* CustomView.swift */,
 				F362BEE9262E7C0800538B2A /* RoundedRectButton.swift */,
 				F362BEEA262E7C0800538B2A /* Loader.swift */,
+				F373267E262FC376006E86F4 /* UIColor.swift */,
+				F3732684262FDEDF006E86F4 /* ThousandFormatted.swift */,
 			);
 			path = Uitilities;
 			sourceTree = "<group>";
@@ -572,7 +577,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F358331C262A23BC005D1746 /* CarModel.swift in Sources */,
+				F373267F262FC376006E86F4 /* UIColor.swift in Sources */,
 				F362BECF262E6BA400538B2A /* K.swift in Sources */,
+				F3732685262FDEDF006E86F4 /* ThousandFormatted.swift in Sources */,
 				F362BED6262E6D2F00538B2A /* CarListTableViewCell.swift in Sources */,
 				F362BEEB262E7C0800538B2A /* CustomView.swift in Sources */,
 				F36FEBB2262CC76200484710 /* CarViewModel.swift in Sources */,
