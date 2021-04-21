@@ -86,23 +86,21 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        modelInputTextField.endEditing(true)
-        makeInputTextFiled.endEditing(true)
+        print(modelInputTextField.text!)
+        print(makeInputTextFiled.text!)
+        
         return true
     }
     
+    /*
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != ""{
-            return true
-        }else{
-            textField.placeholder = "Type something"
-            return false
-        }
+
     }
+    */
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         //use searchTextField.text to get the weather for the city
-        print("Done")
+        
     }
     
 }
