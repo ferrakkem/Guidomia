@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     private var apiService = NetworkManager()
     private var carViewModel = CarViewModel()
     @IBOutlet weak var carListTableView: UITableView!
-    
+    let hexColor = UIColor()
     
     var selectedIndex = -1
     var isCollapce = false
@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         loadData()
         setTableView()
         navLogoAndIcon()
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,15 +40,12 @@ class ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: label)
     }
     
+    
     //MARK: - setUp tableView
     func setTableView(){
         carListTableView.register(UINib(nibName: K.CarList.cellNibName, bundle: nil), forCellReuseIdentifier: K.CarList.cellIdentifier)
-        carListTableView.separatorColor = K.BandColors.orange
-        //carListTableView.sectionHeaderHeight = 30.0
-        carListTableView.separatorInset = UIEdgeInsets(top: 20, left: 30, bottom: 10, right: 30)
-        carListTableView.separatorStyle = .singleLine
-        carListTableView.separatorColor = .yellow
-    
+        carListTableView.separatorColor = hexColor.hexColor(hex: K.BandColors.orange)
+        carListTableView.separatorStyle = .none
         carListTableView.reloadData()
     }
     
@@ -83,9 +79,15 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = carListTableView.dequeueReusableCell(withIdentifier: K.CarList.cellIdentifier, for: indexPath) as! CarListTableViewCell
         let carInfo = carViewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(carData: carInfo)
-
+        cell.layer.shadowOffset = CGSize(width: 0, height: 6)
+        // Configure the cell...
+        let maskLayer = CAShapeLayer()
+        let bounds = cell.bounds
+        maskLayer.path = UIBezierPath(roundedRect: CGRect(x: 2, y: 2, width: bounds.width-4, height: bounds.height-4), cornerRadius: 5).cgPath
+        cell.layer.mask = maskLayer
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.selectedIndex == indexPath.row && isCollapce == true{

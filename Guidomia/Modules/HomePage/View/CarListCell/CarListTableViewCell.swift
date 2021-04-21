@@ -17,6 +17,8 @@ class CarListTableViewCell: UITableViewCell {
     
     var v = CustomView()
     
+
+    
     var currentIndex = 0
     
     @IBOutlet weak var kh: UIView!

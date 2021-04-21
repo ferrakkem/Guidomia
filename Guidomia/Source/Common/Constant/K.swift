@@ -17,9 +17,9 @@ struct K{
     }
     
     struct BandColors {
-        static let orange = UIColor(named: "FC6016")
-        static let darkGray = UIColor(named: "#858585")
-        static let lightGray = UIColor(named: "#D5D5D5")
+        static let orange = "FC6016"
+        static let darkGray = "858585"
+        static let lightGray = "D5D5D5"
     }
     
     struct iPhoneScreen {
