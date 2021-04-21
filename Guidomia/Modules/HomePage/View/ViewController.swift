@@ -18,9 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.navigationController?.setNavigationBarColor(color: K.BandColors.backGroundColor)
-        
+                
         loadData()
         setTableView()
         navLogoAndIcon()
