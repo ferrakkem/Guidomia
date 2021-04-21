@@ -11,14 +11,14 @@ import UIKit
 extension UIColor {
     
     // custom color methods
-    class func colorWithHex(rgbValue: UInt32) -> UIColor {
+    func colorWithHex(rgbValue: UInt32) -> UIColor {
         return UIColor( red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
                         green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
                         blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
                         alpha: CGFloat(1.0))
     }
     
-    class func colorWithHexString(hexStr: String) -> UIColor {
+    func colorWithHexString(hexStr: String) -> UIColor {
         var cString:String = hexStr.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (hexStr.hasPrefix("#")) {
@@ -39,7 +39,7 @@ extension UIColor {
         theImageView.tintColor = newColor;
     }
     
-    class func hexColor(hex:String) -> UIColor {
+    func hexColor(hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {

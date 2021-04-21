@@ -23,7 +23,17 @@ class ViewController: UIViewController {
         
         loadData()
         setTableView()
-        
+        navLogoAndIcon()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    
+    //MARK: - navigationBar
+    func navLogoAndIcon(){
         let label = UILabel()
         label.textColor = UIColor.white
         label.text = "GUIDOMIA"
@@ -31,16 +41,15 @@ class ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: label)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     //MARK: - setUp tableView
     func setTableView(){
         carListTableView.register(UINib(nibName: K.CarList.cellNibName, bundle: nil), forCellReuseIdentifier: K.CarList.cellIdentifier)
         carListTableView.separatorColor = K.BandColors.orange
         //carListTableView.sectionHeaderHeight = 30.0
-        //carListTableView.separatorInset = UIEdgeInsets(top: 10, left: 30, bottom: 10, right: 30)
+        carListTableView.separatorInset = UIEdgeInsets(top: 20, left: 30, bottom: 10, right: 30)
+        carListTableView.separatorStyle = .singleLine
+        carListTableView.separatorColor = .yellow
+    
         carListTableView.reloadData()
     }
     
@@ -74,6 +83,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = carListTableView.dequeueReusableCell(withIdentifier: K.CarList.cellIdentifier, for: indexPath) as! CarListTableViewCell
         let carInfo = carViewModel.cellForRowAt(indexPath: indexPath)
         cell.setCellWithValuesOf(carData: carInfo)
+
         return cell
     }
     
