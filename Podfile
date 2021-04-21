@@ -5,7 +5,9 @@ target 'Guidomia' do
   use_frameworks!
 
   # Pods for Guidomia
-   pod 'Cosmos', '~> 23.0' 
+   pod 'Cosmos', '~> 23.0'
+   pod 'RealmSwift'
+   
    
 
   target 'GuidomiaTests' do

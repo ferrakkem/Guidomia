@@ -12,9 +12,14 @@ class ViewController: UIViewController {
     private var carViewModel = CarViewModel()
     @IBOutlet weak var carListTableView: UITableView!
     let hexColor = UIColor()
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var selectedIndex = -1
     var isCollapce = false
+    
+    @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var makeInputTextFiled: UITextField!
+    @IBOutlet weak var modelInputTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +27,22 @@ class ViewController: UIViewController {
         loadData()
         setTableView()
         navLogoAndIcon()
+        filterViewCustomise()
+        //scrollView.delegate = self
+        
+       
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        scrollView.isScrollEnabled = true
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 2300)
+    }
     
     //MARK: - navigationBar
     func navLogoAndIcon(){
@@ -37,6 +52,13 @@ class ViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .always
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: label)
     }
+    
+    //MARK: - Fillters View customaise
+    func filterViewCustomise(){
+        filterView.layer.cornerRadius = 5.0
+        filterView.layer.masksToBounds = true
+    }
+
     
     
     //MARK: - setUp tableView
@@ -60,6 +82,30 @@ class ViewController: UIViewController {
     
 }
 
+//MARK: - UITextFieldDelegate
+extension ViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        modelInputTextField.endEditing(true)
+        makeInputTextFiled.endEditing(true)
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != ""{
+            return true
+        }else{
+            textField.placeholder = "Type something"
+            return false
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //use searchTextField.text to get the weather for the city
+        print("Done")
+    }
+    
+}
 
 //MARK: - UITableViewDelegate
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
