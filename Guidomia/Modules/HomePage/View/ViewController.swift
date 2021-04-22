@@ -10,11 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     private var apiService = NetworkManager()
     private var carViewModel = CarViewModel()
+    
+   //private var data = [CarModel]()
+    
     @IBOutlet weak var carListTableView: UITableView!
     let hexColor = UIColor()
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var selectedIndex = -1
+    var selectedIndex = 0
     var isCollapce = false
     
     @IBOutlet weak var filterView: UIView!
@@ -30,8 +33,6 @@ class ViewController: UIViewController {
         filterViewCustomise()
         //scrollView.delegate = self
         
-       
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         scrollView.isScrollEnabled = true
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 2300)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: view.frame.height + carListTableView.frame.height / 2)
     }
     
     //MARK: - navigationBar
@@ -88,7 +89,6 @@ extension ViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         print(modelInputTextField.text!)
         print(makeInputTextFiled.text!)
-        
         return true
     }
     
@@ -142,6 +142,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         //print(indexPath.row)
+        
         if selectedIndex == indexPath.row{
             if self.isCollapce == false {
                 self.isCollapce = true
@@ -151,8 +152,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         }else{
             self.isCollapce = true
         }
-        
-        self.selectedIndex = indexPath.row
+            
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
@@ -167,4 +167,18 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
 }
 
+/*
+extension Array where Element == CarModel {
+    func retrievePeople(byName make: String) -> CarModel {
+        return self.filter { $0.make == make }
+    }
 
+    func retrievePeople(byLastName lastname: String) -> CarModel {
+        return self.filter { $0.lastname == lastname }
+    }
+
+    func retrievePeople(byAge age: String) -> CarModel {
+        return self.filter { $0.age == age }
+    }
+}
+*/

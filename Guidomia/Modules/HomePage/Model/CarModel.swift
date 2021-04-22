@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - CarModelElement
-struct CarModel: Codable {
+struct CarModel: Codable, Hashable  {
     let consList: [String]
     let customerPrice: Int
     let make: String

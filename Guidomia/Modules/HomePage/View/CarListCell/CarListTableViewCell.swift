@@ -16,7 +16,6 @@ class CarListTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     
     var v = CustomView()
-    
 
     
     var currentIndex = 0
@@ -32,10 +31,6 @@ class CarListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    //MARK: - getData for cell
-    func setCellWithValuesOf(carData: CarModel) {
-        updateUI(name: carData.make, model: carData.model, price: carData.marketPrice, imageName: carData.image, rating: carData.rating, pros: carData.prosList, cons: carData.consList)
-    }
     
     func formatNumber(n: Int) -> String {
         let num = abs(Double(n))
@@ -64,6 +59,12 @@ class CarListTableViewCell: UITableViewCell {
             return "\(sign)\(n)"
         }
     }
+    
+    //MARK: - getData for cell
+    func setCellWithValuesOf(carData: CarModel) {
+        updateUI(name: carData.make, model: carData.model, price: carData.marketPrice, imageName: carData.image, rating: carData.rating, pros: carData.prosList, cons: carData.consList)
+    }
+    
     
     //MARK: Update the UI Views
     private func updateUI(name: String, model: String, price: Int, imageName: String, rating: Int, pros: [String], cons:[String] ) {
@@ -127,7 +128,6 @@ class CarListTableViewCell: UITableViewCell {
        */
         
         
-        
     }
     
     // MARK: - Get image data
@@ -138,6 +138,12 @@ class CarListTableViewCell: UITableViewCell {
                 self?.carImage?.image = UIImage.init(named: picture)
             }
         }
+    }
+    
+    
+    //MARK: - getData for cell
+    func setValuesOfExpand(carData: CarModel) {
+       print("carData: \(carData)")
     }
     
 }

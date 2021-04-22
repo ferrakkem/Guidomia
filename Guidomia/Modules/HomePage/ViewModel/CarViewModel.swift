@@ -19,6 +19,11 @@ class CarViewModel{
             case .success(let lisOfCar):
                 self.data = lisOfCar
                 //print("List: \(lisOfCar)")
+                /*
+                lisOfCar.forEach { (res) in
+                    DatabaseManager.shared.saveCarLisLocal(customerPrice: res.customerPrice, marketPrice: res.marketPrice, rating: res.rating, make: res.make, model: res.make, imageName: res.image, pros: res.prosList, cons: res.consList)
+                }
+                */
                 completion()
             case .failure(let error):
                 print(error)
@@ -47,9 +52,7 @@ class CarViewModel{
         return data[indexPath]
     }
 
-    func searchGip(indexPath: IndexPath) -> CarModel {
-        return data[indexPath.row]
-    }
+
     
 
     
