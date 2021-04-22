@@ -33,14 +33,12 @@ class CarViewModel{
     
     func numberOfRowsInSection(section: Int) -> Int {
         if data.count != 0 {
-            print(data)
             return data.count
         }
         return 0
     }
 
     func cellForRowAt (indexPath: IndexPath) -> CarModel {
-        print("cellForRowAt")
         return data[indexPath.row]
     }
 

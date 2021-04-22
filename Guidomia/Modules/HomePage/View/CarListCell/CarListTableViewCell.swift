@@ -8,6 +8,8 @@
 import UIKit
 import Cosmos
 
+
+
 class CarListTableViewCell: UITableViewCell {
     @IBOutlet weak var carImage: UIImageView!
     @IBOutlet weak var carMakeInfo: UILabel!
@@ -17,7 +19,8 @@ class CarListTableViewCell: UITableViewCell {
     
     var v = CustomView()
 
-    
+    private var carViewModel = CarViewModel()
+
     var currentIndex = 0
     
     @IBOutlet weak var kh: UIView!
@@ -62,79 +65,40 @@ class CarListTableViewCell: UITableViewCell {
     
     //MARK: - getData for cell
     func setCellWithValuesOf(carData: CarModel) {
-        updateUI(name: carData.make, model: carData.model, price: carData.marketPrice, imageName: carData.image, rating: carData.rating, pros: carData.prosList, cons: carData.consList)
+        updateUI(name: carData.make, model: carData.model, price: carData.marketPrice, imageName: carData.image, rating: carData.rating)
+        //setValuesOfExpand(pros: carData.prosList, cons: carData.consList)
     }
     
     
     //MARK: Update the UI Views
-    private func updateUI(name: String, model: String, price: Int, imageName: String, rating: Int, pros: [String], cons:[String] ) {
+    private func updateUI(name: String, model: String, price: Int, imageName: String, rating: Int) {
         
         let carMakeAndModelInfo = name + " " + model
         self.carMakeInfo.text = carMakeAndModelInfo
         let priceAmount = formatNumber(n: price)
         self.price.text = priceAmount
+        //updating rating
+        updateRatingingUI(rating: rating)
+        // Before we download the image we clear out the old one
+        self.carImage.image = nil
+        setImageDataFrom(picture: imageName)
+    }
+    
+    //MARK: - Update Rating
+    private func updateRatingingUI(rating: Int){
         //setting rating
         self.ratingView.rating = Double(rating)
-        
         //setting rating UI
         self.ratingView.settings.updateOnTouch = false
         self.ratingView.backgroundColor = .clear
         // Set the distance between stars
         self.ratingView.settings.starMargin = 2
-        
-        // Before we download the image we clear out the old one
-        self.carImage.image = nil
-        setImageDataFrom(picture: imageName)
-        
-        
-        /*
-        var vCout = 0
-        let yPos = 10
-        var heig = 20
-        if pros.count > vCout{
-            print("pros: \(pros)")
-            for i in 0..<pros.count {
-                let element = pros[i]
-                let split = element.components(separatedBy: ",")
-                let labelNum = UILabel()
-                labelNum.text = "\n\(split[0])"
-                labelNum.backgroundColor = .blue
-                labelNum.textAlignment = .center
-                labelNum.frame = CGRect( x: 5, y:heig*i + yPos, width:Int(kh.bounds.width) - 10, height: 20)
-                self.kh.addSubview(labelNum)
-                vCout = vCout + 1
-                var frame = self.kh.frame
-                frame.size.height = CGFloat(Int(frame.size.height) + heig*i + yPos)
-                self.kh.frame = frame
-            }
-        }
-
-        if cons.count > vCout {
-            print("Cons: \(cons)")
-            for i in 0..<cons.count {
-                let element = cons[i]
-                let split = element.components(separatedBy: ",")
-                let labelNum = UILabel()
-                print("Split 1: \(split[0])")
-                labelNum.text = split[0]
-                labelNum.backgroundColor = .yellow
-                labelNum.textAlignment = .center
-                labelNum.frame = CGRect( x:Int(kh.bounds.origin.x)+5, y:yPos, width:Int(kh.bounds.width) - 10, height: 20)
-                self.kh.addSubview(labelNum)
-                vCout = vCout + 1
-
-            }
-        }
-       */
-        
-        
     }
     
     // MARK: - Get image data
     private func setImageDataFrom(picture: String) {
         DispatchQueue.global().async { [weak self] in
             DispatchQueue.main.async {
-                print("name :\(picture)")
                 self?.carImage?.image = UIImage.init(named: picture)
             }
         }
@@ -142,14 +106,54 @@ class CarListTableViewCell: UITableViewCell {
     
     
     //MARK: - getData for cell
-    func setValuesOfExpand(carData: CarModel) {
-       print("carData: \(carData)")
+    func setValuesOfExpand(pros: [String], cons:[String]) {
+        print("Prons: \(pros)")
+        print("Comns: \(cons)")
     }
     
 }
 
 
 
+/*
+    var vCout = 0
+    let yPos = 10
+    var heig = 20
+    if pros.count > vCout{
+        print("pros: \(pros)")
+        for i in 0..<pros.count {
+            let element = pros[i]
+            let split = element.components(separatedBy: ",")
+            let labelNum = UILabel()
+            labelNum.text = "\n\(split[0])"
+            labelNum.backgroundColor = .blue
+            labelNum.textAlignment = .center
+            labelNum.frame = CGRect( x: 5, y:heig*i + yPos, width:Int(kh.bounds.width) - 10, height: 20)
+            self.kh.addSubview(labelNum)
+            vCout = vCout + 1
+            var frame = self.kh.frame
+            frame.size.height = CGFloat(Int(frame.size.height) + heig*i + yPos)
+            self.kh.frame = frame
+        }
+    }
+
+    if cons.count > vCout {
+        print("Cons: \(cons)")
+        for i in 0..<cons.count {
+            let element = cons[i]
+            let split = element.components(separatedBy: ",")
+            let labelNum = UILabel()
+            print("Split 1: \(split[0])")
+            labelNum.text = split[0]
+            labelNum.backgroundColor = .yellow
+            labelNum.textAlignment = .center
+            labelNum.frame = CGRect( x:Int(kh.bounds.origin.x)+5, y:yPos, width:Int(kh.bounds.width) - 10, height: 20)
+            self.kh.addSubview(labelNum)
+            vCout = vCout + 1
+
+        }
+    }
+*/
 
 /*
  DispatchQueue.global().async { [weak self] in

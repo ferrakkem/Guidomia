@@ -7,31 +7,32 @@
 
 import UIKit
 
+
+protocol DetailsWeatherDelegate {
+    func getData(selectedCar: [CarModel])
+}
+
 class ViewController: UIViewController {
     private var apiService = NetworkManager()
     private var carViewModel = CarViewModel()
-    
-   //private var data = [CarModel]()
-    
+        
     @IBOutlet weak var carListTableView: UITableView!
     let hexColor = UIColor()
     @IBOutlet weak var scrollView: UIScrollView!
     
-    var selectedIndex = 0
+    var selectedIndex = -1
     var isCollapce = false
     
     @IBOutlet weak var filterView: UIView!
     @IBOutlet weak var makeInputTextFiled: UITextField!
     @IBOutlet weak var modelInputTextField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         loadData()
         setTableView()
         navLogoAndIcon()
         filterViewCustomise()
-        //scrollView.delegate = self
         
     }
     
@@ -60,8 +61,6 @@ class ViewController: UIViewController {
         filterView.layer.masksToBounds = true
     }
 
-    
-    
     //MARK: - setUp tableView
     func setTableView(){
         carListTableView.register(UINib(nibName: K.CarList.cellNibName, bundle: nil), forCellReuseIdentifier: K.CarList.cellIdentifier)
@@ -130,7 +129,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if self.selectedIndex == indexPath.row && isCollapce == true{
             return 243
@@ -152,8 +150,12 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         }else{
             self.isCollapce = true
         }
-            
+        
+        self.selectedIndex = indexPath.row
         tableView.reloadRows(at: [indexPath], with: .automatic)
+        //let index = carViewModel.didSelect(at: indexPath.row)
+        //print("Index: \(index)")
+
     }
     
     
@@ -166,6 +168,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
 }
+
 
 /*
 extension Array where Element == CarModel {
