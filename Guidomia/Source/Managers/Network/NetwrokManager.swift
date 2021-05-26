@@ -22,6 +22,7 @@ class NetworkManager{
             // Back to the main thread
             DispatchQueue.main.async {
                 //print("error***")
+                print("jsonData: \(jsonData)")
                 completion(.success(jsonData))
             }
         } catch let error {
