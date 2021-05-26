@@ -106,6 +106,10 @@ extension ViewController: UITextFieldDelegate{
         print("fromDevelopmentBranch")
     }
     
+    
+    func fromMasterBranch(){
+        print("fromMasterBranch")
+    }
 }
 
 
