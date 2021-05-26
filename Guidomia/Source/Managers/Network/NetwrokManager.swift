@@ -29,6 +29,5 @@ class NetworkManager{
             print("##error")
             completion(.failure(error))
         }
-        
     }
 }
